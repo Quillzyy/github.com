@@ -1,12 +1,17 @@
 #include<iostream>
+#include<conio.h>
 using namespace std;
 
 //Made by Kevin Alonzo Manuel Bakara_2207421032
+//edit by kelompok saqil 
 
 int main(){
+
 	string NIM, NIK, nama, TTL, jurusan, prodi, alamat, alamat2, notel, tgl;
 	string nm_ayah, nm_ibu, pk_ayah, pk_ibu, notel_ortu;
-	
+	char repeat;
+do {
+
 	cout<<"\t\tSELAMAT DATANG DI PROGRAM BIODATA"<<endl;
 	cout<<"\t\t   SILAHKAN MASUKAN DATA ANDA"<<endl;
 	cout<<"       -----------------------------------------------------"<<endl;
@@ -86,5 +91,11 @@ int main(){
 	cout<<"\t\t\t\t\t\t\t FOTO"<<endl;
 		cout<<"\n"<<endl;
 	cout<<"\t\t\t\t\t\t "<<nama<<endl;
+	
+	cout<<"Apakah anda ingin mengulang "; cin>>repeat;}
+
+	while (repeat=='y');
+	cout<<"Press any key to exit..";
+	getch();
 	return 0;
 }
