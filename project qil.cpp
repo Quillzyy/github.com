@@ -58,9 +58,9 @@ cout << "_________________________________________|";
 
 
 cout << "1. Lihat Profil" << endl;
-cout << "1. Lihat Profil" << endl;
-cout << "1. Lihat Profil" << endl;
-cout << "1. Lihat Profil" << endl;
+cout << "2. Ujian" << endl;
+cout << "3. Lihat Nilai" << endl;
+cout << "4. Logout" << endl;
 	
 	
 	
