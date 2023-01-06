@@ -29,8 +29,7 @@ cin>>NIM;
 
 
 	if(NIM=="047"){
-		Nama="Abdurrahman Ammar Ihsan \n";
-		IN="SELAMAT DATANG";
+		Nama="Abdurrahman Ammar Ihsan";
 		salah=='n';
 	} else{
 		cout<<"Maaf NIM tidak terdaftar \n";
@@ -40,11 +39,17 @@ cin>>NIM;
 	
 system(clear);
 }while (salah=='y');
-cout<<IN<<endl;
-cout<<"Nama 	: "<<Nama<<endl;
-cout<<"NIM	: 2207421"<<NIM<<endl;
-cout<<"Kelas	: TMJ 1B"<<endl;
+cout<<"SELAMAT DATANG"<<endl;
+cout<<"Nama 	: "<<Nama<<"\t |\n";
+cout<<"NIM	: 2207421"<<NIM<<"\t\t\t |\n";
+cout<<"Kelas	: TMJ 1B"<<"\t\t\t |\n";
+cout << "_________________________________________|";
 
+
+cout << "1. Lihat Profil" << endl;
+cout << "1. Lihat Profil" << endl;
+cout << "1. Lihat Profil" << endl;
+cout << "1. Lihat Profil" << endl;
 	
 	
 	
