@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include <cstdlib>
 #include<conio.h>
@@ -29,14 +30,24 @@ cin>>NIM;
 
 
 	if(NIM=="047"){
-		Nama="Abdurrahman Ammar Ihsan";
-		salah=='n';
-	} else{
+		Nama="Abdurrahman Ammar Ihsan \n";
+	}else if (NIM=="059"){
+		Nama="Corneius Yuli Rosdianto"
+	}else if (NIM=="032"){
+		Nama="Kevin Alonzo Manuel Bakara"
+	}else if (NIM=="057"){
+		Nama="Shaquille Afriza Hidayat"
+	}else if (NIM=="056"){
+		Nama="Muhammad Brian Azura Nixon"	
+	}else if (NIM=="051"){
+		Nama="Jonatan Victorian Wijaya"	
+	}else{
 		cout<<"Maaf NIM tidak terdaftar \n";
 		salah='y';
-		getch();	
-	}
-	
+    }
+getch();
+IN="SELAMAT DATANG";
+salah=='n';		
 system(clear);
 }while (salah=='y');
 cout<<"SELAMAT DATANG"<<endl;
@@ -56,3 +67,4 @@ cout << "1. Lihat Profil" << endl;
 	
 return 0;	
 }
+
