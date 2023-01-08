@@ -1,17 +1,7 @@
-
 #include<iostream>
-#include <cstdlib>
+#include<cstdlib>
 #include<conio.h>
-
-#ifdef _WIN32
-	#define clear "cls"
-#else
-	#define clear "clear"
-#endif
 using namespace std;
-
-
-
 
 int main(){
 char salah;
@@ -23,7 +13,7 @@ do{
 
 //cout<<"==========List NIM yang terdaftar========== \n";
 
-system(clear);
+system("CLS");
 cout<<"LOGIN\n";
 cout<<"Masukan NIM: 2207421";
 cin>>NIM;
@@ -67,7 +57,16 @@ cout
 cout << "Pilihan Anda : ";
 cin >> pil;
 
+switch(pil){
+			case 1:
+			if(NIM=="047"){
+				ammar();
+				getch();
+				system("CLS");
+			}
+
+		}
+
 	
 return 0;	
 }
-
