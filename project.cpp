@@ -14,6 +14,20 @@ void jovi();
 void tatatertib();
 
 int main(){
+
+	//Perkenalan
+
+	cout << "Proyek Elearning" << endl;
+	cout << "Anggota: " << endl;
+	cout << "- Abdurrahman Ammar Ihsan" << endl;
+	cout << "- Cornelius Yuli Rosdianto" << endl;
+	cout << "- Jonatan Victorian Wijaya" << endl;
+	cout << "- Kevin Alonzo Manuel Bakara" << endl;
+	cout << "- Muhammad Brian Azura Nixon" << endl;
+	cout << "- Shaquille Arriza Hidayat" << endl << endl;
+	cout << "Tekan apa saja untuk lanjut :)" << endl;
+	getch();
+
 	char salahLogin = 'y', salahMain = 'y', mulai = 'y';
 	int pil, pil1;
 	string NIM, Nama;
