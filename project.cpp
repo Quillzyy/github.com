@@ -11,6 +11,7 @@ void kevin();
 void shaquille();
 void brian();
 void jovi();
+void tatatertib();
 
 int main(){
 
@@ -27,12 +28,12 @@ int main(){
 	cout << "Tekan apa saja untuk lanjut :)" << endl;
 	getch();
 
-	char salahLogin = 'y', salahMain = 'y';
-	int pil;
+	char salahLogin = 'y', salahMain = 'y', mulai = 'y';
+	int pil, pil1;
 	string NIM, Nama;
 
 	//Login
-
+	login :
 	do{
 		//cout<<"==========List NIM yang terdaftar========== \n";
 
@@ -73,12 +74,11 @@ int main(){
 	} while (salahLogin =='y');
 
 	//Main
-
+	menu_utama:
 	do{
 		system("CLS");
 
 		//Judul
-
 		cout << "________________________________________" << endl;
 		cout << "SELAMAT DATANG				|" << endl;
 		cout << "Nama 	: " << Nama << "	|" << endl;
@@ -137,10 +137,56 @@ int main(){
 
 			//Ujian
 			case 2:
-			
+			system("CLS");
+			cout << "SELAMAT DATANG DI HALAMAN UJIAN" << endl;
+			cout << "---------------------------------------------------" << endl;
+			cout << "1. Ujian Tengah Semester" << endl;
+			cout << "2. Ujian Akhir Semester" << endl;
+			cout << "Pilihan Anda : ";
+			cin >> pil1;
+
+			switch(pil1) {
+				
+				case 1:
+				system("CLS");
+                cout << "\t\t\tUJIAN TENGAH SEMESTER" << endl;
+				cout << "---------------------------------------------------------------------" << endl;
+				cout << endl;
+				tatatertib();
+				cout << "Mulai ujian ? (y/n)";
+				cin >> mulai;
+				if (mulai=='y'){
+					system("CLS");
+                    cout << "1. Sebutkan dan jelaskan" << endl;
+				}
+				getch();
+				goto menu_utama;
+				break;
+
+				case 2:
+                system("CLS");
+			    cout << "\t\t\tUJIAN AKHIR SEMESTER" << endl;
+				cout << "---------------------------------------------------------------------" << endl;
+				cout << endl;
+				tatatertib();
+				cout << "Mulai ujian ? (y/n)";
+				cin >> mulai;
+				if (mulai=='y'){}
+				getch();
+				goto menu_utama;
+				break;
+
+			}
+
+			//Lihat Nilai
+            case 3:
+			cout << "NILAI ANDA" << endl;
+			cout << "---------------------------------------------------" << endl;
+
 
 			//Exit
 			case 4:
+			goto login;
 			break;
 
 		}
@@ -152,43 +198,81 @@ int main(){
 //Fungsi
 
 void ammar(){
-	cout << "Abdurrahman Ammar Ihsan" << endl;
-	cout << "2207421047" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Abdurrahman Ammar Ihsan" << endl;
+	cout << "NIM \t\t: 2207421047" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void cornelius(){
-	cout << "Corneius Yuli Rosdianto" << endl;
-	cout << "2207421059" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Corneius Yuli Rosdianto" << endl;
+	cout << "NIM \t\t: 2207421059" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void kevin(){
-	cout << "Kevin Alonzo Manuel Bakara" << endl;
-	cout << "2207421032" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Kevin Alonzo Manuel Bakara" << endl;
+	cout << "NIM \t\t: 2207421032" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void shaquille(){
-	cout << "Shaquille Arriza Hidayat" << endl;
-	cout << "2207421057" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Shaquille Arriza Hidayat" << endl;
+	cout << "NIM \t\t: 2207421057" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void brian(){
-	cout << "Muhammad Brian Azura Nixon" << endl;
-	cout << "2207421056" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Muhammad Brian Azura Nixon" << endl;
+	cout << "NIM \t\t: 2207421056" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void jovi(){
-	cout << "Jonatan Victorian Wijaya" << endl;
-	cout << "2207421051" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Jonatan Victorian Wijaya" << endl;
+	cout << "NIM \t\t: 2207421051" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
+}
+
+void tatatertib(){
+	cout << "---------------------------- TATA TERTIB ----------------------------" << endl;
+	cout << "1. Dilarang membuka handphone atau catatan selama ujian berlangsung" << endl;
+	cout << "2. Dilarang melihat jawaban milik orang lain" << endl;
+	cout << "3. Dilarang meninggalkan ruang ujian sebelum waktu berakhir" << endl;
+	cout << "---------------------------------------------------------------------" << endl;
 }
