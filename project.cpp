@@ -18,7 +18,7 @@ int main(){
 	string NIM, Nama;
 
 	//Login
-
+	login :
 	do{
 		//cout<<"==========List NIM yang terdaftar========== \n";
 
@@ -127,6 +127,7 @@ int main(){
 
 			//Exit
 			case 4:
+			goto login;
 			break;
 
 		}
