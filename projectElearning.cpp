@@ -38,7 +38,8 @@ int main(){
 		//cout<<"==========List NIM yang terdaftar========== \n";
 
 		system("CLS");
-		cout<<"LOGIN\n";
+		cout<<"       | LOGIN |\n";
+		cout<<"       |_______| \n";
 		cout<<"Masukan NIM: 2207421";
 		cin>>NIM;
 
@@ -80,7 +81,7 @@ int main(){
 
 		//Judul
 		cout << "________________________________________" << endl;
-		cout << "SELAMAT DATANG				|" << endl;
+		cout << "	SELAMAT DATANG			|" << endl;
 		cout << "Nama 	: " << Nama << "	|" << endl;
 		cout << "NIM	: 2207421" << NIM <<"			|" << endl;
 		cout << "Kelas	: TMJ 1B" << "			|" << endl;
