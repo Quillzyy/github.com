@@ -139,43 +139,73 @@ int main(){
 //Fungsi
 
 void ammar(){
-	cout << "Abdurrahman Ammar Ihsan" << endl;
-	cout << "2207421047" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Abdurrahman Ammar Ihsan" << endl;
+	cout << "NIM \t\t: 2207421047" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void cornelius(){
-	cout << "Corneius Yuli Rosdianto" << endl;
-	cout << "2207421059" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Corneius Yuli Rosdianto" << endl;
+	cout << "NIM \t\t: 2207421059" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void kevin(){
-	cout << "Kevin Alonzo Manuel Bakara" << endl;
-	cout << "2207421032" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Kevin Alonzo Manuel Bakara" << endl;
+	cout << "NIM \t\t: 2207421032" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void shaquille(){
-	cout << "Shaquille Arriza Hidayat" << endl;
-	cout << "2207421057" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Shaquille Arriza Hidayat" << endl;
+	cout << "NIM \t\t: 2207421057" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void brian(){
-	cout << "Muhammad Brian Azura Nixon" << endl;
-	cout << "2207421056" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Muhammad Brian Azura Nixon" << endl;
+	cout << "NIM \t\t: 2207421056" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
 
 void jovi(){
-	cout << "Jonatan Victorian Wijaya" << endl;
-	cout << "2207421051" << endl;
-	cout << "Teknik Informatika dan Komputer" << endl;
-	cout << "Teknik Multimedia dan Jaringan" << endl;
+	system("CLS");
+	cout << "PROFIL" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Nama \t\t: Jonatan Victorian Wijaya" << endl;
+	cout << "NIM \t\t: 2207421051" << endl;
+	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
+	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "Tekan enter untuk kembali" << endl;
 }
