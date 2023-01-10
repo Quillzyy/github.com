@@ -11,10 +11,11 @@ void kevin();
 void shaquille();
 void brian();
 void jovi();
+void tatatertib();
 
 int main(){
-	char salahLogin = 'y', salahMain = 'y';
-	int pil;
+	char salahLogin = 'y', salahMain = 'y', mulai = 'y';
+	int pil, pil1;
 	string NIM, Nama;
 
 	//Login
@@ -59,12 +60,11 @@ int main(){
 	} while (salahLogin =='y');
 
 	//Main
-
+	menu_utama:
 	do{
 		system("CLS");
 
 		//Judul
-
 		cout << "________________________________________" << endl;
 		cout << "SELAMAT DATANG				|" << endl;
 		cout << "Nama 	: " << Nama << "	|" << endl;
@@ -123,7 +123,52 @@ int main(){
 
 			//Ujian
 			case 2:
-			
+			system("CLS");
+			cout << "SELAMAT DATANG DI HALAMAN UJIAN" << endl;
+			cout << "---------------------------------------------------" << endl;
+			cout << "1. Ujian Tengah Semester" << endl;
+			cout << "2. Ujian Akhir Semester" << endl;
+			cout << "Pilihan Anda : ";
+			cin >> pil1;
+
+			switch(pil1) {
+				
+				case 1:
+				system("CLS");
+                cout << "\t\t\tUJIAN TENGAH SEMESTER" << endl;
+				cout << "---------------------------------------------------------------------" << endl;
+				cout << endl;
+				tatatertib();
+				cout << "Mulai ujian ? (y/n)";
+				cin >> mulai;
+				if (mulai=='y'){
+					system("CLS");
+                    cout << "1. Sebutkan dan jelaskan" << endl;
+				}
+				getch();
+				goto menu_utama;
+				break;
+
+				case 2:
+                system("CLS");
+			    cout << "\t\t\tUJIAN AKHIR SEMESTER" << endl;
+				cout << "---------------------------------------------------------------------" << endl;
+				cout << endl;
+				tatatertib();
+				cout << "Mulai ujian ? (y/n)";
+				cin >> mulai;
+				if (mulai=='y'){}
+				getch();
+				goto menu_utama;
+				break;
+
+			}
+
+			//Lihat Nilai
+            case 3:
+			cout << "NILAI ANDA" << endl;
+			cout << "---------------------------------------------------" << endl;
+
 
 			//Exit
 			case 4:
@@ -208,4 +253,12 @@ void jovi(){
 	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
 	cout << "---------------------------------------------------" << endl;
 	cout << "Tekan enter untuk kembali" << endl;
+}
+
+void tatatertib(){
+	cout << "---------------------------- TATA TERTIB ----------------------------" << endl;
+	cout << "1. Dilarang membuka handphone atau catatan selama ujian berlangsung" << endl;
+	cout << "2. Dilarang melihat jawaban milik orang lain" << endl;
+	cout << "3. Dilarang meninggalkan ruang ujian sebelum waktu berakhir" << endl;
+	cout << "---------------------------------------------------------------------" << endl;
 }
