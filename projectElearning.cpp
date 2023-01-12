@@ -16,7 +16,8 @@ void tatatertib();
 int main(){
 
 	//Perkenalan
-
+	perkenalan : 
+	system ("CLS");
 	cout << "Proyek Program Elearning" << endl;
 	cout << "Anggota: " << endl;
 	cout << "- Abdurrahman Ammar Ihsan		(047)" << endl;
@@ -25,12 +26,30 @@ int main(){
 	cout << "- Kevin Alonzo Manuel Bakara		(032)" << endl;
 	cout << "- Muhammad Brian Azura Nixon		(056)" << endl;
 	cout << "- Shaquille Arriza Hidayat		(057)" << endl << endl;
+	cout << "*diperlukan menginput NIM anggota agar bisa masuk"<<endl;
+	cout << " ke dalam program. Tolong ingat salah satu NIM anggota"<<endl;
 	cout << "Tekan apa saja untuk lanjut :)" << endl;
 	getch();
 
-	char salahLogin = 'y', salahMain = 'y', mulai = 'y';
+	char salahLogin = 'y', salahMain = 'y', mulai = 'y', a;
 	int pil, pil1;
 	string NIM, Nama;
+
+	halaman_awal : 
+	system ("CLS");
+	cout << "Selamat datang di tampilan awal Projek Eleaning ini"<<endl;
+	cout << "Silahkan pilih apa yang apa yang ingin anda lakukan"<<endl;
+	cout << "a. Login "<<endl;
+	cout << "b. Kembali ke bagian sebelumnya "<<endl;
+	cout << "c. Keluar Program "<<endl;
+	cout << "Pilihan anda : "; cin>>a;
+	
+	if(a=='a') { goto login; }
+	else if (a=='b') {goto perkenalan; }
+	else if (a=='c') { cout << "Terima kasih sudah berkunjung..."; 
+						getch(); return 0; }
+	else {goto halaman_awal; }
+
 
 	//Login
 	login :
@@ -189,7 +208,7 @@ int main(){
 
 			//Exit
 			case 4:
-			goto login;
+			goto halaman_awal;
 			break;
 
 		}
