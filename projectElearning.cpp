@@ -5,6 +5,8 @@ using namespace std;
 
 //Fungsinya ada di paling bawah, ini cuma deklarasi
 
+int UTS();
+int UAS();
 void ammar();
 void cornelius();
 void kevin();
@@ -14,6 +16,8 @@ void jovi();
 void tatatertib();
 
 int main(){
+
+	system("CLS");
 
 	//Perkenalan
 
@@ -28,6 +32,8 @@ int main(){
 	cout << "Tekan apa saja untuk lanjut :)" << endl;
 	getch();
 
+	int UTSAmar = 0, UTSCornet = 0, UTSKepin = 0, UTSSaqil = 0, UTSBrain = 0, UTSJopi = 0;
+	int UASAmar = 0, UASCornet = 0, UASKepin = 0, UASSaqil = 0, UASBrain = 0, UASJopi = 0;
 	char salahLogin = 'y', salahMain = 'y', mulai = 'y';
 	int pil, pil1;
 	string NIM, Nama;
@@ -150,21 +156,41 @@ int main(){
 
 			switch(pil1) {
 				
+				//Ujian Ril
 				case 1:
 				system("CLS");
                 cout << "\t\t\tUJIAN TENGAH SEMESTER" << endl;
 				cout << "---------------------------------------------------------------------" << endl;
 				cout << endl;
 				tatatertib();
-				cout << "Mulai ujian ? (y/n)";
+				cout << "Mulai ujian ? (y/n) : ";
 				cin >> mulai;
 				if (mulai=='y'){
-					system("CLS");
-                    cout << "1. Sebutkan dan jelaskan" << endl;
+					if(NIM=="047"){
+						UTSAmar = UTS();
+					}
+					else if (NIM=="059"){
+						UTSCornet = UTS();
+					}
+					else if (NIM=="032"){
+						UTSKepin = UTS();
+					}
+					else if (NIM=="057"){
+						UTSSaqil = UTS();
+					}
+					else if (NIM=="056"){
+						UTSBrain = UTS();
+					}
+					else if (NIM=="051"){
+						UTSJopi = UTS();
+					}
 				}
+				else{
+					goto menu_utama;
+				}
+
 				getch();
-				goto menu_utama;
-				break;
+				continue;
 
 				case 2:
                 system("CLS");
@@ -174,23 +200,76 @@ int main(){
 				tatatertib();
 				cout << "Mulai ujian ? (y/n)";
 				cin >> mulai;
-				if (mulai=='y'){}
-				getch();
-				goto menu_utama;
-				break;
+				if (mulai=='y'){
+					if(NIM=="047"){
+						UASAmar = UAS();
+					}
+					else if (NIM=="059"){
+						UASCornet = UAS();
+					}
+					else if (NIM=="032"){
+						UASKepin = UAS();
+					}
+					else if (NIM=="057"){
+						UASSaqil = UAS();
+					}
+					else if (NIM=="056"){
+						UASBrain = UAS();
+					}
+					else if (NIM=="051"){
+						UASJopi = UAS();
+					}
+				}
+				else{
+					goto menu_utama;
+				}
 
+				getch();
+				continue;
+
+				default:
+				continue;
 			}
 
 			//Lihat Nilai
             case 3:
+			system("CLS");
 			cout << "NILAI ANDA" << endl;
 			cout << "---------------------------------------------------" << endl;
-
+			if(NIM=="047"){
+				cout << "Nilai UTS anda : " << UTSAmar << endl;
+				cout << "Nilai UAS anda : " << UASAmar << endl;
+			}
+			else if (NIM=="059"){
+				cout << "Nilai UTS anda : " << UTSCornet << endl;
+				cout << "Nilai UAS anda : " << UASCornet << endl;
+			}
+			else if (NIM=="032"){
+				cout << "Nilai UTS anda : " << UTSKepin << endl;
+				cout << "Nilai UAS anda : " << UASKepin << endl;
+			}
+			else if (NIM=="057"){
+				cout << "Nilai UTS anda : " << UTSSaqil << endl;
+				cout << "Nilai UAS anda : " << UASSaqil << endl;
+			}
+			else if (NIM=="056"){
+				cout << "Nilai UTS anda : " << UTSBrain << endl;
+				cout << "Nilai UAS anda : " << UASBrain << endl;
+			}
+			else if (NIM=="051"){
+				cout << "Nilai UTS anda : " << UTSJopi << endl;
+				cout << "Nilai UAS anda : " << UASJopi << endl;
+			}
+			getch();
+			continue;
 
 			//Exit
 			case 4:
 			goto login;
 			break;
+
+			default:
+			continue;
 
 		}
 
@@ -278,4 +357,253 @@ void tatatertib(){
 	cout << "2. Dilarang melihat jawaban milik orang lain" << endl;
 	cout << "3. Dilarang meninggalkan ruang ujian sebelum waktu berakhir" << endl;
 	cout << "---------------------------------------------------------------------" << endl;
+}
+
+int UTS(){
+	int nilai = 0;
+	string jawaban;
+	
+	//Soal dan Jawaban UTS
+	do{
+		system("CLS");
+		cout << "1. Ini Soal UTS Nomor 1" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "2. Ini Soal UTS Nomor 2" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			cout << "Tekan enter untuk kembali" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "3. Ini Soal UTS Nomor 3" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			cout << "Tekan enter untuk kembali" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "4. Ini Soal UTS Nomor 4" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			cout << "Tekan enter untuk kembali" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "5. Ini Soal UTS Nomor 5" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			cout << "Tekan enter untuk kembali" << endl;
+			getch();
+		}
+	}while(true);
+
+	cout << "Selamat telah menyelesaikan tes \\(^o^)/" << endl;
+	return nilai;
+}
+
+int UAS(){
+	cout << "Aku juga mw :)" << endl;
+	getch();
+
+	int nilai = 0;
+	string jawaban;
+	
+	//Soal dan Jawaban UAS
+	do{
+		system("CLS");
+		cout << "1. Ini Soal UAS Nomor 1" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "2. Ini Soal UAS Nomor 2" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			cout << "Tekan enter untuk kembali" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "3. Ini Soal UAS Nomor 3" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			cout << "Tekan enter untuk kembali" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "4. Ini Soal UAS Nomor 4" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			cout << "Tekan enter untuk kembali" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "5. Ini Soal UAS Nomor 5" << endl;
+		cout << "a. " << endl;
+		cout << "b. " << endl;
+		cout << "c. " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			cout << "Tekan enter untuk kembali" << endl;
+			getch();
+		}
+	}while(true);
+
+	cout << "Selamat telah menyelesaikan tes \\(^o^)/" << endl;
+	return nilai;
 }
