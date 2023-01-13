@@ -390,7 +390,7 @@ int UTS(){
 			nilai += 20;
 			break;
 		}
-		else if(jawaban == "b" || jawaban == "B"){
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
 		}
