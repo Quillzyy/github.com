@@ -17,15 +17,14 @@ int main(){
 
 	//Perkenalan
 
-	cout << "Proyek Elearning Sederhana" << endl;
-	cout << "-------------------------------------" << endl;
+	cout << "Proyek Program Elearning" << endl;
 	cout << "Anggota: " << endl;
-	cout << "- Abdurrahman Ammar Ihsan" << endl;
-	cout << "- Cornelius Yuli Rosdianto" << endl;
-	cout << "- Jonatan Victorian Wijaya" << endl;
-	cout << "- Kevin Alonzo Manuel Bakara" << endl;
-	cout << "- Muhammad Brian Azura Nixon" << endl;
-	cout << "- Shaquille Arriza Hidayat" << endl << endl;
+	cout << "- Abdurrahman Ammar Ihsan		(047)" << endl;
+	cout << "- Cornelius Yuli Rosdianto		(059)" << endl;
+	cout << "- Jonatan Victorian Wijaya		(051)" << endl;
+	cout << "- Kevin Alonzo Manuel Bakara		(032)" << endl;
+	cout << "- Muhammad Brian Azura Nixon		(056)" << endl;
+	cout << "- Shaquille Arriza Hidayat		(057)" << endl << endl;
 	cout << "Tekan apa saja untuk lanjut :)" << endl;
 	getch();
 
@@ -39,8 +38,10 @@ int main(){
 		//cout<<"==========List NIM yang terdaftar========== \n";
 
 		system("CLS");
-		cout<<"\t    HALAMAN LOGIN\n";
-		cout << "-------------------------------------" << endl;
+		cout<<"        _______" << endl;
+		cout<<"       |       |" << endl;
+		cout<<"       | LOGIN |\n";
+		cout<<"       |_______| \n" << endl;
 		cout<<"Masukan NIM: 2207421";
 		cin>>NIM;
 
@@ -82,7 +83,7 @@ int main(){
 
 		//Judul
 		cout << "________________________________________" << endl;
-		cout << "SELAMAT DATANG				|" << endl;
+		cout << "	SELAMAT DATANG			|" << endl;
 		cout << "Nama 	: " << Nama << "	|" << endl;
 		cout << "NIM	: 2207421" << NIM <<"			|" << endl;
 		cout << "Kelas	: TMJ 1B" << "			|" << endl;
