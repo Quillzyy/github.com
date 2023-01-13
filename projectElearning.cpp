@@ -7,12 +7,7 @@ using namespace std;
 
 int UTS();
 int UAS();
-void ammar();
-void cornelius();
-void kevin();
-void shaquille();
-void brian();
-void jovi();
+void intro(string Nama, string NIM);
 void tatatertib();
 
 int main(){
@@ -20,7 +15,7 @@ int main(){
 	system("CLS");
 
 	//Perkenalan
-	login :
+	perkenalan :
 	system ("CLS");
 	cout << "Proyek Program Elearning" << endl;
 	cout << "Anggota: " << endl;
@@ -29,26 +24,43 @@ int main(){
 	cout << "- Jonatan Victorian Wijaya		(051)" << endl;
 	cout << "- Kevin Alonzo Manuel Bakara		(032)" << endl;
 	cout << "- Muhammad Brian Azura Nixon		(056)" << endl;
-	cout << "- Shaquille Arriza Hidayat		(057)" << endl << endl;
+	cout << "- Shaquille Arriza Hidayat		(057)" << endl;
+	cout << "*diperlukan menginput NIM anggota agar bisa masuk"<<endl;
+	cout << " ke dalam program. Tolong ingat salah satu NIM anggota"<<endl  << endl;
 	cout << "Tekan apa saja untuk lanjut :)" << endl;
 	getch();
 
 	int UTSAmar = 0, UTSCornet = 0, UTSKepin = 0, UTSSaqil = 0, UTSBrain = 0, UTSJopi = 0;
 	int UASAmar = 0, UASCornet = 0, UASKepin = 0, UASSaqil = 0, UASBrain = 0, UASJopi = 0;
-	char salahLogin = 'y', salahMain = 'y', mulai = 'y';
+	char salahLogin = 'y', salahMain = 'y', mulai = 'y', a;
 	int pil, pil1;
 	string NIM, Nama;
 
-	//Login
+	halaman_awal : 
+	system ("CLS");
+	cout << "Selamat datang di tampilan awal Projek Eleaning ini"<<endl;
+	cout << "Silahkan pilih apa yang apa yang ingin anda lakukan"<<endl;
+	cout << "a. Login "<<endl;
+	cout << "b. Kembali ke bagian sebelumnya "<<endl;
+	cout << "c. Keluar Program "<<endl;
+	cout << "Pilihan anda : "; cin>>a;
 	
+	if(a=='a') { goto login; }
+	else if (a=='b') {goto perkenalan; }
+	else if (a=='c') { cout << "Terima kasih sudah berkunjung..."; 
+						getch(); return 0; }
+	else {goto halaman_awal; }
+
+	//Login
+	login :
 	do{
 		//cout<<"==========List NIM yang terdaftar========== \n";
 
 		system("CLS");
-		cout<<"        _______" << endl;
-		cout<<"       |       |" << endl;
-		cout<<"       | LOGIN |\n";
-		cout<<"       |_______| \n" << endl;
+		cout<<"     _______________" << endl;
+		cout<<"    |               |" << endl;
+		cout<<"    |     LOGIN     |\n";
+		cout<<"    |_______________| \n" << endl;
 		cout<<"Masukan NIM: 2207421";
 		cin>>NIM;
 
@@ -108,42 +120,11 @@ int main(){
 
 			//Lihat Profil
 			case 1:
-			if(NIM=="047"){
-				ammar();
-				getch();
-				system("CLS");
-				continue;
-			}
-			else if (NIM=="059"){
-				cornelius();
-				getch();
-				system("CLS");
-				continue;
-			}
-			else if (NIM=="032"){
-				kevin();
-				getch();
-				system("CLS");
-				continue;
-			}
-			else if (NIM=="057"){
-				shaquille();
-				getch();
-				system("CLS");
-				continue;
-			}
-			else if (NIM=="056"){
-				brian();
-				getch();
-				system("CLS");
-				continue;
-			}
-			else if (NIM=="051"){
-				jovi();
-				getch();
-				system("CLS");
-				continue;
-			}
+			system ("CLS");
+			intro(Nama, NIM);
+			system ("CLS");
+			continue;
+			//setelah nampilih profil, pindah ke menu_utama
 
 			//Ujian
 			case 2:
@@ -266,7 +247,7 @@ int main(){
 
 			//Exit
 			case 4:
-			goto login;
+			goto halaman_awal;
 			break;
 
 			default:
@@ -280,76 +261,16 @@ int main(){
 
 //Fungsi
 
-void ammar(){
-	system("CLS");
+void intro (string Nama, string NIM) {  //fungsi untuk perkenalan
 	cout << "PROFIL" << endl;
 	cout << "---------------------------------------------------" << endl;
-	cout << "Nama \t\t: Abdurrahman Ammar Ihsan" << endl;
-	cout << "NIM \t\t: 2207421047" << endl;
+	cout << "Nama \t\t: "<< Nama << endl;
+	cout << "NIM \t\t: 2207421"<< NIM << endl;
 	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
 	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
 	cout << "---------------------------------------------------" << endl;
 	cout << "Tekan enter untuk kembali" << endl;
-}
-
-void cornelius(){
-	system("CLS");
-	cout << "PROFIL" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Nama \t\t: Corneius Yuli Rosdianto" << endl;
-	cout << "NIM \t\t: 2207421059" << endl;
-	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
-	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Tekan enter untuk kembali" << endl;
-}
-
-void kevin(){
-	system("CLS");
-	cout << "PROFIL" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Nama \t\t: Kevin Alonzo Manuel Bakara" << endl;
-	cout << "NIM \t\t: 2207421032" << endl;
-	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
-	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Tekan enter untuk kembali" << endl;
-}
-
-void shaquille(){
-	system("CLS");
-	cout << "PROFIL" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Nama \t\t: Shaquille Arriza Hidayat" << endl;
-	cout << "NIM \t\t: 2207421057" << endl;
-	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
-	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Tekan enter untuk kembali" << endl;
-}
-
-void brian(){
-	system("CLS");
-	cout << "PROFIL" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Nama \t\t: Muhammad Brian Azura Nixon" << endl;
-	cout << "NIM \t\t: 2207421056" << endl;
-	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
-	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Tekan enter untuk kembali" << endl;
-}
-
-void jovi(){
-	system("CLS");
-	cout << "PROFIL" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Nama \t\t: Jonatan Victorian Wijaya" << endl;
-	cout << "NIM \t\t: 2207421051" << endl;
-	cout << "Jurusan \t: Teknik Informatika dan Komputer" << endl;
-	cout << "Program Studi \t: Teknik Multimedia dan Jaringan" << endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Tekan enter untuk kembali" << endl;
+	getch();
 }
 
 void tatatertib(){
