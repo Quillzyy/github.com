@@ -406,7 +406,9 @@ int UTS(){
 }
 
 int UAS(){
-	cout << "Aku juga mw :)" << endl;
+	cout << "======================================" << endl;
+	cout << "Jangan lupa berdoa sebelum mengerjakan" << endl;
+	cout << "======================================" << endl;
 	getch();
 
 	int nilai = 0;
@@ -415,10 +417,32 @@ int UAS(){
 	//Soal dan Jawaban UAS
 	do{
 		system("CLS");
-		cout << "1. Pada c++, perintah 'cin' digunakan untuk..." << endl;
-		cout << "a. Mengulang" << endl;
-		cout << "b. Menampilkan" << endl;
-		cout << "c. Menginput" << endl << endl;
+cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
+		cout << "a. ++ dan -- " << endl;
+		cout << "b. ++ dan ** " << endl;
+		cout << "c. || dan && " << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "a" || jawaban == "A"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "2. Untuk mendeklarasikan array di C++ di tandai dengan tanda?" << endl;
+		cout << "a. {} " << endl;
+		cout << "b. || " << endl;
+		cout << "c. []" << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "c" || jawaban == "C"){
@@ -438,33 +462,10 @@ int UAS(){
 
 	do{
 		system("CLS");
-		cout << "2. Pada c++, perintah 'cout' digunakan untuk..." << endl;
-		cout << "a. Mengulang" << endl;
-		cout << "b. Menampilkan" << endl;
-		cout << "c. Menginput" << endl << endl;
-		cout << "Jawaban anda: ";
-		cin >> jawaban;
-		if(jawaban == "b" || jawaban == "B"){
-			nilai += 20;
-			break;
-		}
-		else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
-			nilai = nilai;
-			break;
-		}
-		else{
-			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
-			cout << "Tekan enter untuk kembali" << endl;
-			getch();
-		}
-	}while(true);
-
-	do{
-		system("CLS");
-		cout << "3. Ini Soal UAS Nomor 3" << endl;
-		cout << "a. " << endl;
-		cout << "b. " << endl;
-		cout << "c. " << endl << endl;
+		cout << "3.  Berikut bentuk umum penulisan pernyataan if yang benar yaitu" << endl;
+		cout << "a. if (x > y); " << endl;
+		cout << "b. if x > y then: " << endl;
+		cout << "c. if (x > y) then: " << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "a" || jawaban == "A"){
@@ -486,7 +487,7 @@ int UAS(){
 		system("CLS");
 		cout << "4. Dalam menyusun suatu program, langkahpertama yang harus dilakukan adalah.." << endl;
 		cout << "a. Membuat Algoritma " << endl;
-		cout << "b. Langsung Membuat Kode Program" << endl;
+		cout << "b. Langsung Membuat Kode Program " << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "a" || jawaban == "A"){
@@ -507,21 +508,22 @@ int UAS(){
 	do{
 		system("CLS");
 		cout << "5. Berikut ini yang bukan termasuk metode pengurutan data pada elemen array..." << endl;
-		cout << "a. Distance Sort" << endl;
-		cout << "b. Bubble Sort" << endl;
+		cout << "a. Distance Sort " << endl;
+		cout << "b. Bubble Sort " << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
-		if(jawaban == "a" || jawaban == "A"){
-			nilai = nilai;
+		if(jawaban == "b" || jawaban == "B"){
+			nilai += 20;
 			break;
 		}
-		else if(jawaban == "b" || jawaban == "B"){
-			nilai += 20;
+		else if(jawaban == "a" || jawaban == "A"){
+			nilai = nilai;
 			break;
 		}
 		else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
+			getch();
 			getch();
 		}
 	}while(true);
