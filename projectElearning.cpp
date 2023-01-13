@@ -367,39 +367,17 @@ int UTS(){
 	//Soal dan Jawaban UTS
 	do{
 		system("CLS");
-		cout << "1. Ini Soal UTS Nomor 1" << endl;
-		cout << "a. " << endl;
-		cout << "b. " << endl;
-		cout << "c. " << endl << endl;
+		cout << "1. Pada c++, perintah 'cin' digunakan untuk..." << endl;
+		cout << "a. Menginput " << endl;
+		cout << "b. Menampilkan " << endl;
+		cout << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
 		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
-			nilai = nilai;
-			break;
-		}
-		else{
-			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
-			getch();
-		}
-	}while(true);
-
-	do{
-		system("CLS");
-		cout << "2. Ini Soal UTS Nomor 2" << endl;
-		cout << "a. " << endl;
-		cout << "b. " << endl;
-		cout << "c. " << endl << endl;
-		cout << "Jawaban anda: ";
-		cin >> jawaban;
-		if(jawaban == "a" || jawaban == "A"){
-			nilai += 20;
-			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+		else if(jawaban == "b" || jawaban == "B"){
 			nilai = nilai;
 			break;
 		}
@@ -412,17 +390,17 @@ int UTS(){
 
 	do{
 		system("CLS");
-		cout << "3. Ini Soal UTS Nomor 3" << endl;
-		cout << "a. " << endl;
-		cout << "b. " << endl;
-		cout << "c. " << endl << endl;
+		cout << "2. Pada c++, perintah 'cout' digunakan untuk..." << endl;
+		cout << "a. Menginput " << endl;
+		cout << "b. Menampilkan " << endl;
+		cout << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
-		if(jawaban == "a" || jawaban == "A"){
+		if(jawaban == "b" || jawaban == "B"){
 			nilai += 20;
 			break;
 		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+		else if(jawaban == "a" || jawaban == "A"){
 			nilai = nilai;
 			break;
 		}
@@ -435,17 +413,17 @@ int UTS(){
 
 	do{
 		system("CLS");
-		cout << "4. Ini Soal UTS Nomor 4" << endl;
-		cout << "a. " << endl;
-		cout << "b. " << endl;
-		cout << "c. " << endl << endl;
+		cout << "3. Pada c++, 'int' merupakan tipe data..." << endl;
+		cout << "a. angka " << endl;
+		cout << "b. huruf " << endl;
+		cout << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
 		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+		else if(jawaban == "b" || jawaban == "B"){
 			nilai = nilai;
 			break;
 		}
@@ -458,17 +436,40 @@ int UTS(){
 
 	do{
 		system("CLS");
-		cout << "5. Ini Soal UTS Nomor 5" << endl;
-		cout << "a. " << endl;
-		cout << "b. " << endl;
-		cout << "c. " << endl << endl;
+		cout << "4. Pada c++, 'float' merupakan tipe data..." << endl;
+		cout << "a. angka" << endl;
+		cout << "b. angka desimal" << endl;
+		cout << endl << endl;
+		cout << "Jawaban anda: ";
+		cin >> jawaban;
+		if(jawaban == "b" || jawaban == "B"){
+			nilai += 20;
+			break;
+		}
+		else if(jawaban == "a" || jawaban == "A"){
+			nilai = nilai;
+			break;
+		}
+		else{
+			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
+			cout << "Tekan enter untuk kembali" << endl;
+			getch();
+		}
+	}while(true);
+
+	do{
+		system("CLS");
+		cout << "5. Pada c++, 'bool' merupakan tipe data..." << endl;
+		cout << "a. true or false " << endl;
+		cout << "b. 1 huruf/angka " << endl;
+		cout << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
 		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+		else if(jawaban == "b" || jawaban == "B"){
 			nilai = nilai;
 			break;
 		}
