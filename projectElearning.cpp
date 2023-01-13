@@ -390,7 +390,7 @@ int UTS(){
 			nilai += 20;
 			break;
 		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+		else if(jawaban == "b" || jawaban == "B"){
 			nilai = nilai;
 			break;
 		}
@@ -484,17 +484,16 @@ int UAS(){
 
 	do{
 		system("CLS");
-		cout << "4. Ini Soal UAS Nomor 4" << endl;
-		cout << "a. " << endl;
-		cout << "b. " << endl;
-		cout << "c. " << endl << endl;
+		cout << "4. Dalam menyusun suatu program, langkahpertama yang harus dilakukan adalah.." << endl;
+		cout << "a. Membuat Algoritma " << endl;
+		cout << "b. Langsung Membuat Kode Program" << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
 		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+		else if(jawaban == "b" || jawaban == "B"){
 			nilai = nilai;
 			break;
 		}
@@ -507,18 +506,17 @@ int UAS(){
 
 	do{
 		system("CLS");
-		cout << "5. Ini Soal UAS Nomor 5" << endl;
-		cout << "a. " << endl;
-		cout << "b. " << endl;
-		cout << "c. " << endl << endl;
+		cout << "5. Berikut ini yang bukan termasuk metode pengurutan data pada elemen array..." << endl;
+		cout << "a. Distance Sort" << endl;
+		cout << "b. Bubble Sort" << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "a" || jawaban == "A"){
-			nilai += 20;
+			nilai = nilai;
 			break;
 		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
-			nilai = nilai;
+		else if(jawaban == "b" || jawaban == "B"){
+			nilai += 20;
 			break;
 		}
 		else{
