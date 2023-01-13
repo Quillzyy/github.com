@@ -20,7 +20,8 @@ int main(){
 	system("CLS");
 
 	//Perkenalan
-
+	login :
+	system ("CLS");
 	cout << "Proyek Program Elearning" << endl;
 	cout << "Anggota: " << endl;
 	cout << "- Abdurrahman Ammar Ihsan		(047)" << endl;
@@ -39,7 +40,7 @@ int main(){
 	string NIM, Nama;
 
 	//Login
-	login :
+	
 	do{
 		//cout<<"==========List NIM yang terdaftar========== \n";
 
