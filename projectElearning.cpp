@@ -17,7 +17,8 @@ int main(){
 
 	//Perkenalan
 
-	cout << "Proyek Elearning" << endl;
+	cout << "Proyek Elearning Sederhana" << endl;
+	cout << "-------------------------------------" << endl;
 	cout << "Anggota: " << endl;
 	cout << "- Abdurrahman Ammar Ihsan" << endl;
 	cout << "- Cornelius Yuli Rosdianto" << endl;
@@ -38,7 +39,8 @@ int main(){
 		//cout<<"==========List NIM yang terdaftar========== \n";
 
 		system("CLS");
-		cout<<"LOGIN\n";
+		cout<<"\t    HALAMAN LOGIN\n";
+		cout << "-------------------------------------" << endl;
 		cout<<"Masukan NIM: 2207421";
 		cin>>NIM;
 
