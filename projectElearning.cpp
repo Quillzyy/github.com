@@ -4,7 +4,7 @@
 using namespace std;
 
 //Fungsinya ada di paling bawah, ini cuma deklarasi
-
+void ujian_uts(int nilai_uts, char satu);
 void ammar();
 void cornelius();
 void kevin();
@@ -31,10 +31,10 @@ int main(){
 	cout << "Tekan apa saja untuk lanjut :)" << endl;
 	getch();
 
-	char salahLogin = 'y', salahMain = 'y', mulai = 'y', a;
-	int pil, pil1;
+	char salahLogin = 'y', salahMain = 'y', mulai = 'y', a, satu;
+	int pil, pil1, nilai_uts, nilai_uas;
 	string NIM, Nama;
-
+	nilai_uts = 0; nilai_uas=0;  
 	halaman_awal : 
 	system ("CLS");
 	cout << "Selamat datang di tampilan awal Projek Eleaning ini"<<endl;
@@ -179,7 +179,7 @@ int main(){
 				cin >> mulai;
 				if (mulai=='y'){
 					system("CLS");
-                    cout << "1. Sebutkan dan jelaskan" << endl;
+                    ujian_uts(nilai_uts, satu);
 				}
 				getch();
 				goto menu_utama;
@@ -202,8 +202,14 @@ int main(){
 
 			//Lihat Nilai
             case 3:
+			cout << "==================================================="<<endl;
 			cout << "NILAI ANDA" << endl;
 			cout << "---------------------------------------------------" << endl;
+
+				if (nilai_uts <= 0) {cout << "Anda belum pernal mengerjakan ujian apapun "<<endl;}
+				else {cout << "Nilai UTS : "<<nilai_uts; }
+			 
+			getch(); goto menu_utama;
 
 
 			//Exit
@@ -297,4 +303,41 @@ void tatatertib(){
 	cout << "2. Dilarang melihat jawaban milik orang lain" << endl;
 	cout << "3. Dilarang meninggalkan ruang ujian sebelum waktu berakhir" << endl;
 	cout << "---------------------------------------------------------------------" << endl;
+}
+
+void ujian_uts (int nilai_uts, char satu){
+	nilai_uts = 0;
+	cout<<"1. Pada c++, perintah 'cin' digunakan untuk..."<<endl;
+	cout<<"   a. Menginput           b. menampilkan"<<endl;
+	cout<<"Jawaban anda : "; cin>>satu;
+		if (satu=='a') { nilai_uts += 20;  }
+	cout<<endl;
+
+	cout<<"2. Pada c++, perintah 'cout' digunakan untuk..."<<endl;
+	cout<<"   a. Menampilkan          b. menginput"<<endl;
+	cout<<"Jawaban anda : "; cin>>satu; 
+		if (satu=='a') { nilai_uts += 20; }
+	cout<<endl;
+
+	cout<<"3. Pada c++, 'int' merupakan tipe data..."<<endl;
+	cout<<"   a. angka                b. huruf"<<endl;
+	cout<<"Jawaban anda : "; cin>>satu;
+		if (satu=='a') { nilai_uts += 20;}
+	cout<<endl;
+
+	cout<<"4. Pada c++, 'float' merupakan tipe data..."<<endl;
+	cout<<"   a. angka desimal        b. angka"<<endl;
+	cout<<"Jawaban anda : "; cin>>satu;
+		if (satu=='a') { nilai_uts += 20; }
+	cout<<endl;
+
+	cout<<"5. Pada c++, 'bool' merupakan tipe data..."<<endl;
+	cout<<"   a. true or false        b. 1 huruf/angka"<<endl;
+	cout<<"Jawaban anda : "; cin>>satu;
+		if (satu=='a') { nilai_uts += 20;}
+	cout<<endl;
+
+	cout<<"Ujian anda telah selesai \n"<<endl; 
+	cout<<"Nilai anda : "<<nilai_uts<<endl; 
+	getch();
 }
