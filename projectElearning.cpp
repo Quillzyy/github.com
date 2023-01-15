@@ -217,8 +217,8 @@ int main(){
 			//Lihat Nilai
             case 3:
 			system("CLS");
-			cout << "NILAI ANDA" << endl;
-			cout << "---------------------------------------------------" << endl;
+			cout << "    NILAI ANDA" << endl;
+			cout << "---------------------" << endl;
 			if(NIM=="047"){
 				cout << "Nilai UTS anda : " << UTSAmar << endl;
 				cout << "Nilai UAS anda : " << UASAmar << endl;
