@@ -133,6 +133,7 @@ int main(){
 			cout << "---------------------------------------------------" << endl;
 			cout << "1. Ujian Tengah Semester" << endl;
 			cout << "2. Ujian Akhir Semester" << endl;
+			cout << "3. Back" << endl;	
 			cout << "Pilihan Anda : ";
 			cin >> pil1;
 
