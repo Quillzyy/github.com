@@ -263,7 +263,7 @@ int main(){
 //Fungsi
 
 void intro (string Nama, string NIM) {  //fungsi untuk perkenalan
-	cout << "PROFIL" << endl;
+	cout << "\t\tPROFIL" << endl;
 	cout << "---------------------------------------------------" << endl;
 	cout << "Nama \t\t: "<< Nama << endl;
 	cout << "NIM \t\t: 2207421"<< NIM << endl;
