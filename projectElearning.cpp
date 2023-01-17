@@ -31,27 +31,30 @@ int main(){
 
 	int UTSAmar = 0, UTSCornet = 0, UTSKepin = 0, UTSSaqil = 0, UTSBrain = 0, UTSJopi = 0;
 	int UASAmar = 0, UASCornet = 0, UASKepin = 0, UASSaqil = 0, UASBrain = 0, UASJopi = 0;
-	char salahLogin = 'y', salahMain = 'y', mulai = 'y', a;
-	int pil, pil1;
+	char mulai;
+	char pil, pil1;
 	string NIM, Nama;
 
 	halaman_awal : 
-	system ("CLS");
-	cout << "Selamat datang di tampilan awal Projek Eleaning ini"<<endl;
-	cout << "Silahkan pilih apa yang apa yang ingin anda lakukan"<<endl;
-	cout << "a. Login "<<endl;
-	cout << "b. Kembali ke bagian sebelumnya "<<endl;
-	cout << "c. Keluar Program "<<endl;
-	cout << "Pilihan anda : "; cin>>a;
-	
-	if(a=='a') { goto login; 
-	} else if (a=='b') {goto perkenalan; 
-	} else if (a=='c') { 
-				cout <<endl<<"Terima kasih sudah berkunjung..."<<endl; 
-				getch(); 
-				cout <<"________________________________";
-				return 0; 
-	} else {goto halaman_awal; }
+	{
+		char awal;
+		system ("CLS");
+		cout << "Selamat datang di tampilan awal Projek Eleaning ini"<<endl;
+		cout << "Silahkan pilih apa yang apa yang ingin anda lakukan"<<endl;
+		cout << "a. Login "<<endl;
+		cout << "b. Kembali ke bagian sebelumnya "<<endl;
+		cout << "c. Keluar Program "<<endl;
+		cout << "Pilihan anda : "; cin>>awal;
+		
+		if(awal=='a') { goto login; 
+		} else if (awal=='b') {goto perkenalan; 
+		} else if (awal=='c') { 
+					cout <<endl<<"Terima kasih sudah berkunjung..."<<endl; 
+					getch(); 
+					cout <<"________________________________";
+					return 0; 
+		} else {goto halaman_awal; }
+	}
 
 	//Login
 	login :
@@ -75,7 +78,7 @@ int main(){
 		} else if (NIM=="051"){
 			Nama="Jonatan Victorian Wijaya";
 			break;
-		} else if (NIM=="056"){								//Daftar NIM dan Nama Anggota
+		} else if (NIM=="056"){	
 			Nama="Muhammad Brian Azura Nixon";
 			break;
 		} else if (NIM=="057"){
@@ -84,11 +87,15 @@ int main(){
 		} else if (NIM=="059"){
 			Nama="Cornelius Yuli Rosdianto";
 			break;
+		} else if (NIM == "00"){
+			goto halaman_awal;
 		} else{
-			cout<<"Maaf NIM tidak terdaftar \n";
+			cout<<"Maaf NIM dengan akhiran '" << NIM << "' tidak terdaftar \n";
+			cout << "Ketik '00' pada login untuk kembali ke halaman awal" << endl;
 			getch(); system("CLS");
-		}		
-	} while (salahLogin =='y');
+		}
+		 		
+	} while (true);
 
 	//Main
 	menu_utama:
@@ -113,7 +120,7 @@ int main(){
 		switch(pil){
 
 			//Lihat Profil
-			case 1:
+			case '1':
 			system ("CLS");
 			intro(Nama, NIM);
 			system ("CLS");
@@ -121,7 +128,7 @@ int main(){
 			//setelah nampilih profil, pindah ke menu_utama
 
 			//Ujian
-			case 2:
+			case '2':
 			system("CLS");
 			cout << "SELAMAT DATANG DI HALAMAN UJIAN" << endl;
 			cout << "---------------------------------------------------" << endl;
@@ -134,7 +141,7 @@ int main(){
 			switch(pil1) {
 				
 				//Ujian Ril
-				case 1:
+				case '1':
 				system("CLS");
                 cout << "\t\t\tUJIAN TENGAH SEMESTER" << endl;
 				cout << "---------------------------------------------------------------------" << endl;
@@ -162,7 +169,7 @@ int main(){
 
 				getch(); continue;
 
-				case 2:
+				case '2':
                 system("CLS");
 			    cout << "\t\t\tUJIAN AKHIR SEMESTER" << endl;
 				cout << "---------------------------------------------------------------------" << endl;
@@ -197,7 +204,7 @@ int main(){
 			}
 
 			//Lihat Nilai
-            case 3:
+            case '3':
 			system("CLS");
 			cout << "    NILAI ANDA" << endl;
 			cout << "---------------------" << endl;
@@ -224,7 +231,7 @@ int main(){
 			getch(); continue;
 
 			//Exit
-			case 4:
+			case '4':
 			goto halaman_awal;
 			break;
 
@@ -234,7 +241,7 @@ int main(){
 		}
 
 	break;
-	} while(salahMain == 'y');
+	} while(true);
 }
 
 //Fungsi
@@ -260,6 +267,12 @@ void tatatertib(){
 }
 
 int UTS(){
+	system("CLS");
+	cout << "======================================" << endl;
+	cout << "Jangan lupa berdoa sebelum mengerjakan" << endl;
+	cout << "======================================" << endl;
+	getch();
+
 	int nilai = 0;
 	string jawaban;
 	
@@ -384,6 +397,7 @@ int UTS(){
 }
 
 int UAS(){
+	system("CLS");
 	cout << "======================================" << endl;
 	cout << "Jangan lupa berdoa sebelum mengerjakan" << endl;
 	cout << "======================================" << endl;
@@ -395,7 +409,7 @@ int UAS(){
 	//Soal dan Jawaban UAS
 	do{
 		system("CLS");
-cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
+		cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
 		cout << "a. ++ dan -- " << endl;
 		cout << "b. ++ dan ** " << endl;
 		cout << "c. || dan && " << endl << endl;
@@ -463,8 +477,8 @@ cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
 
 	do{
 		system("CLS");
-		cout << "4. Dalam menyusun suatu program, langkahpertama yang harus dilakukan adalah.." << endl;
-		cout << "a. Membuat Algoritma " << endl;
+		cout << "4. Dalam menyusun suatu program, langkah pertama yang harus dilakukan adalah.." << endl;
+		cout << "a. Membuat Algoritma Flowchart" << endl;
 		cout << "b. Langsung Membuat Kode Program " << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
