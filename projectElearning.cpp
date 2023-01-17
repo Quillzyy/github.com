@@ -215,11 +215,12 @@ int main(){
 			case 4:
 			goto halaman_awal;
 			break;
-			}
-			continue;
+
 			default:
+			continue;
+
+		}
 			
-		
 
 	break;
 	} while(salahMain == 'y');
