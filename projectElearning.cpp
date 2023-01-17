@@ -73,7 +73,7 @@ int main(){
 			Nama="Kevin Alonzo Manuel Bakara";
 			break;
 		} else if (NIM=="047"){
-			Nama="Kevin Alonzo Manuel Bakara";
+			Nama="Abdurrahman Ammar Ihsan";
 			break;
 		} else if (NIM=="051"){
 			Nama="Jonatan Victorian Wijaya";
