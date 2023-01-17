@@ -174,7 +174,7 @@ int main(){
 				cout << "---------------------------------------------------------------------" << endl;
 				cout << endl;
 				tatatertib();
-				cout << "Mulai ujian ? (y/n)";
+				cout << "Mulai ujian ? (y/n) : ";
 				cin >> mulai;
 				if (mulai=='y' || mulai=='Y'){
 					if(NIM=="047"){
@@ -194,6 +194,8 @@ int main(){
 				} else{
 					goto menu_utama;
 				}
+
+				getch(); continue;
 
 				case 3:
 				goto menu_utama;
@@ -277,7 +279,7 @@ void tatatertib(){
 }
 
 int UTS(){
-	system("CLS");
+	cout << endl;
 	cout << "======================================" << endl;
 	cout << "Jangan lupa berdoa sebelum mengerjakan" << endl;
 	cout << "======================================" << endl;
@@ -407,7 +409,7 @@ int UTS(){
 }
 
 int UAS(){
-	system("CLS");
+	cout << endl;
 	cout << "======================================" << endl;
 	cout << "Jangan lupa berdoa sebelum mengerjakan" << endl;
 	cout << "======================================" << endl;
@@ -519,14 +521,13 @@ int UAS(){
 			nilai += 20;
 			break;
 
-		} else if(jawaban == "a" || jawaban == "A"){
+		} else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
 
 		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
-			getch();
 			getch();
 		}
 	}while(true);
