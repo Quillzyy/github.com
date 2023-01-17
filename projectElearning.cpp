@@ -1,5 +1,4 @@
 #include<iostream>
-#include<cstdlib>
 #include<conio.h>
 using namespace std;
 
@@ -24,7 +23,7 @@ int main(){
 	cout << "- Jonatan Victorian Wijaya		(051)" << endl;
 	cout << "- Kevin Alonzo Manuel Bakara		(032)" << endl;
 	cout << "- Muhammad Brian Azura Nixon		(056)" << endl;
-	cout << "- Shaquille Arriza Hidayat		(057)" << endl;
+	cout << "- Shaquille Arriza Hidayat		(057)" << endl<<endl;
 	cout << "*diperlukan menginput NIM anggota agar bisa masuk"<<endl;
 	cout << " ke dalam program. Tolong ingat salah satu NIM anggota"<<endl  << endl;
 	cout << "Tekan apa saja untuk lanjut :)" << endl;
@@ -32,7 +31,7 @@ int main(){
 
 	int UTSAmar = 0, UTSCornet = 0, UTSKepin = 0, UTSSaqil = 0, UTSBrain = 0, UTSJopi = 0;
 	int UASAmar = 0, UASCornet = 0, UASKepin = 0, UASSaqil = 0, UASBrain = 0, UASJopi = 0;
-	char salahLogin = 'y', salahMain = 'y', mulai = 'y', a;
+	char salahMain = 'y', mulai = 'y', a;
 	int pil, pil1;
 	string NIM, Nama;
 
@@ -53,9 +52,7 @@ int main(){
 
 	//Login
 	login :
-	do{
 		//cout<<"==========List NIM yang terdaftar========== \n";
-
 		system("CLS");
 		cout<<"     _______________" << endl;
 		cout<<"    |               |" << endl;
@@ -66,27 +63,20 @@ int main(){
 
 		if(NIM=="047"){
 			Nama="Abdurrahman Ammar Ihsan";
-			break;
 		} else if (NIM=="059"){
 			Nama="Cornelius Yuli Rosdianto";
-			break;
 		} else if (NIM=="032"){
 			Nama="Kevin Alonzo Manuel Bakara";
-			break;
 		} else if (NIM=="057"){
 			Nama="Shaquille Arriza Hidayat";
-			break;
 		} else if (NIM=="056"){
 			Nama="Muhammad Brian Azura Nixon";
-			break;
 		} else if (NIM=="051"){
 			Nama="Jonatan Victorian Wijaya";
-			break;
-		}else{
+		} else{
 			cout<<"Maaf NIM tidak terdaftar \n";
-			getch(); system("CLS");
+			getch(); system("CLS"); goto login;
 		}		
-	} while (salahLogin =='y');
 
 	//Main
 	menu_utama:
@@ -203,19 +193,19 @@ int main(){
 			if(NIM=="047"){
 				cout << "Nilai UTS anda : " << UTSAmar << endl;
 				cout << "Nilai UAS anda : " << UASAmar << endl;
-			}else if (NIM=="059"){
+			} else if (NIM=="059"){
 				cout << "Nilai UTS anda : " << UTSCornet << endl;
 				cout << "Nilai UAS anda : " << UASCornet << endl;
-			}else if (NIM=="032"){
+			} else if (NIM=="032"){
 				cout << "Nilai UTS anda : " << UTSKepin << endl;
 				cout << "Nilai UAS anda : " << UASKepin << endl;
-			}else if (NIM=="057"){
+			} else if (NIM=="057"){
 				cout << "Nilai UTS anda : " << UTSSaqil << endl;
 				cout << "Nilai UAS anda : " << UASSaqil << endl;
-			}else if (NIM=="056"){
+			} else if (NIM=="056"){
 				cout << "Nilai UTS anda : " << UTSBrain << endl;
 				cout << "Nilai UAS anda : " << UASBrain << endl;
-			}else if (NIM=="051"){
+			} else if (NIM=="051"){
 				cout << "Nilai UTS anda : " << UTSJopi << endl;
 				cout << "Nilai UAS anda : " << UASJopi << endl;
 			}
@@ -273,16 +263,15 @@ int UTS(){
 		if(jawaban == "c" || jawaban == "C"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
 		}
+
 	}while(true);
 
 	do{
@@ -296,16 +285,15 @@ int UTS(){
 		if(jawaban == "b" || jawaban == "B"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
+		} else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
 		}
+
 	}while(true);
 
 	do{
