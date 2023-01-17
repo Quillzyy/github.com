@@ -1,5 +1,4 @@
 #include<iostream>
-#include<cstdlib>
 #include<conio.h>
 using namespace std;
 
@@ -24,7 +23,7 @@ int main(){
 	cout << "- Jonatan Victorian Wijaya		(051)" << endl;
 	cout << "- Kevin Alonzo Manuel Bakara		(032)" << endl;
 	cout << "- Muhammad Brian Azura Nixon		(056)" << endl;
-	cout << "- Shaquille Arriza Hidayat		(057)" << endl;
+	cout << "- Shaquille Arriza Hidayat		(057)" << endl<<endl;
 	cout << "*diperlukan menginput NIM anggota agar bisa masuk"<<endl;
 	cout << " ke dalam program. Tolong ingat salah satu NIM anggota"<<endl  << endl;
 	cout << "Tekan apa saja untuk lanjut :)" << endl;
@@ -32,25 +31,30 @@ int main(){
 
 	int UTSAmar = 0, UTSCornet = 0, UTSKepin = 0, UTSSaqil = 0, UTSBrain = 0, UTSJopi = 0;
 	int UASAmar = 0, UASCornet = 0, UASKepin = 0, UASSaqil = 0, UASBrain = 0, UASJopi = 0;
-	char salahLogin = 'y', salahMain = 'y', mulai = 'y', a;
-	int pil, pil1;
+	char mulai;
+	char pil, pil1;
 	string NIM, Nama;
 
 	halaman_awal : 
-	system ("CLS");
-	cout << "Selamat datang di Projek Elearning "<<endl;
-	cout << "---------------------------------------------------" << endl;
-	cout << "Silahkan pilih apa yang apa yang ingin anda lakukan"<<endl;
-	cout << "[a] Login "<<endl;
-	cout << "[b] Kembali ke bagian sebelumnya "<<endl;
-	cout << "[c] Keluar Program "<<endl;
-	cout << "Pilihan anda : "; cin>>a;
-	
-	if( a=='a' || a=='A') { goto login; }
-	else if ( a=='b'|| a == 'B') {goto perkenalan; }
-	else if ( a=='c'|| a == 'C') { cout << "Terima kasih sudah berkunjung..."; 
-	getch(); return 0; }
-	else {goto halaman_awal; }
+	{
+		char awal;
+		system ("CLS");
+		cout << "Selamat datang di tampilan awal Projek Elearning ini"<<endl;
+		cout << "Silahkan pilih apa yang apa yang ingin anda lakukan"<<endl;
+		cout << "[a] Login "<<endl;
+		cout << "[b] Kembali ke bagian sebelumnya "<<endl;
+		cout << "[c] Keluar Program "<<endl;
+		cout << "Pilihan anda : "; cin>>awal;
+		
+		if(awal=='a') { goto login; 
+		} else if (awal=='b') {goto perkenalan; 
+		} else if (awal=='c') { 
+					cout <<endl<<"Terima kasih sudah berkunjung..."<<endl; 
+					getch(); 
+					cout <<"________________________________";
+					return 0; 
+		} else {goto halaman_awal; }
+	}
 
 	//Login
 	login :
@@ -65,36 +69,32 @@ int main(){
 		cout<<"Masukan NIM: 2207421";
 		cin>>NIM;
 
-		if(NIM=="047"){
-			Nama="Abdurrahman Ammar Ihsan";
-			break;
-		}
-		else if (NIM=="059"){
-			Nama="Cornelius Yuli Rosdianto";
-			break;
-		}
-		else if (NIM=="032"){
+		if(NIM=="032"){
 			Nama="Kevin Alonzo Manuel Bakara";
 			break;
-		}
-		else if (NIM=="057"){
-			Nama="Shaquille Arriza Hidayat";
+		} else if (NIM=="047"){
+			Nama="Kevin Alonzo Manuel Bakara";
 			break;
-		}
-		else if (NIM=="056"){
-			Nama="Muhammad Brian Azura Nixon";
-			break;
-		}
-		else if (NIM=="051"){
+		} else if (NIM=="051"){
 			Nama="Jonatan Victorian Wijaya";
 			break;
-		}
-		else{
-			cout<<"Maaf NIM tidak terdaftar \n";
-			getch();
+		} else if (NIM=="056"){	
+			Nama="Muhammad Brian Azura Nixon";
+			break;
+		} else if (NIM=="057"){
+			Nama="Shaquille Arriza Hidayat";
+			break;
+		} else if (NIM=="059"){
+			Nama="Cornelius Yuli Rosdianto";
+			break;
+		} else{
+			cout<<"Maaf NIM dengan akhiran '" << NIM << "' tidak terdaftar \n";
+			cout << "*Ketik enter untuk kembali ke halaman awal" << endl; getch();
+			goto halaman_awal;
 			system("CLS");
-		}		
-	} while (salahLogin =='y');
+		}
+		 		
+	} while (true);
 
 	//Main
 	menu_utama:
@@ -116,11 +116,10 @@ int main(){
 		cin >> pil;
 
 		//Perpecahan Pilihan
-
 		switch(pil){
 
 			//Lihat Profil
-			case 1:
+			case '1':
 			system ("CLS");
 			intro(Nama, NIM);
 			system ("CLS");
@@ -128,8 +127,7 @@ int main(){
 			//setelah nampilin profil, pindah ke menu_utama
 
 			//Ujian
-			case 2:
-			hlm_ujian:
+			case '2':
 			system("CLS");
 			cout << "\t  SELAMAT DATANG DI HALAMAN UJIAN" << endl;
 			cout << "---------------------------------------------------" << endl;
@@ -142,7 +140,7 @@ int main(){
 			switch(pil1) {
 				
 				//Ujian Ril
-				case 1:
+				case '1':
 				system("CLS");
                 cout << "\t\t\tUJIAN TENGAH SEMESTER" << endl;
 				cout << "---------------------------------------------------------------------" << endl;
@@ -153,31 +151,24 @@ int main(){
 				if (mulai=='y' || mulai=='Y'){
 					if(NIM=="047"){
 						UTSAmar = UTS();
-					}
-					else if (NIM=="059"){
+					} else if (NIM=="059"){
 						UTSCornet = UTS();
-					}
-					else if (NIM=="032"){
+					} else if (NIM=="032"){
 						UTSKepin = UTS();
-					}
-					else if (NIM=="057"){
+					} else if (NIM=="057"){
 						UTSSaqil = UTS();
-					}
-					else if (NIM=="056"){
+					} else if (NIM=="056"){
 						UTSBrain = UTS();
-					}
-					else if (NIM=="051"){
+					} else if (NIM=="051"){
 						UTSJopi = UTS();
 					}
-				}
-				else{
-					goto hlm_ujian;
+				} else{
+					goto menu_utama;
 				}
 
-				getch();
-				continue;
+				getch(); continue;
 
-				case 2:
+				case '2':
                 system("CLS");
 			    cout << "\t\t\tUJIAN AKHIR SEMESTER" << endl;
 				cout << "---------------------------------------------------------------------" << endl;
@@ -188,25 +179,20 @@ int main(){
 				if (mulai=='y' || mulai=='Y'){
 					if(NIM=="047"){
 						UASAmar = UAS();
-					}
-					else if (NIM=="059"){
+					} else if (NIM=="059"){
 						UASCornet = UAS();
-					}
-					else if (NIM=="032"){
+					} else if (NIM=="032"){
 						UASKepin = UAS();
-					}
-					else if (NIM=="057"){
+					} else if (NIM=="057"){
 						UASSaqil = UAS();
-					}
-					else if (NIM=="056"){
+					} else if (NIM=="056"){
 						UASBrain = UAS();
-					}
-					else if (NIM=="051"){
+					} else if (NIM=="051"){
 						UASJopi = UAS();
 					}
-				}
-				else{
-					goto hlm_ujian;
+
+				} else{
+					goto menu_utama;
 				}
 
 				case 3:
@@ -220,7 +206,7 @@ int main(){
 			}
 
 			//Lihat Nilai
-            case 3:
+            case '3':
 			system("CLS");
 			cout << "\t ______________________" << endl;
 			cout << "\t|                      |" << endl;
@@ -229,38 +215,33 @@ int main(){
 			if(NIM=="047"){
 				cout << "Nilai UTS anda : " << UTSAmar << endl;
 				cout << "Nilai UAS anda : " << UASAmar << endl;
-				cout << "*Tekan apa saja untuk kembali" << endl;
-			}
-			else if (NIM=="059"){
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+			} else if (NIM=="059"){
 				cout << "Nilai UTS anda : " << UTSCornet << endl;
 				cout << "Nilai UAS anda : " << UASCornet << endl;
-				cout << "*Tekan apa saja untuk kembali" << endl;
-			}
-			else if (NIM=="032"){
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+			} else if (NIM=="032"){
 				cout << "Nilai UTS anda : " << UTSKepin << endl;
 				cout << "Nilai UAS anda : " << UASKepin << endl;
-				cout << "*Tekan apa saja untuk kembali" << endl;
-			}
-			else if (NIM=="057"){
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+			} else if (NIM=="057"){
 				cout << "Nilai UTS anda : " << UTSSaqil << endl;
 				cout << "Nilai UAS anda : " << UASSaqil << endl;
-				cout << "*Tekan apa saja untuk kembali" << endl;
-			}
-			else if (NIM=="056"){
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+			} else if (NIM=="056"){
 				cout << "Nilai UTS anda : " << UTSBrain << endl;
 				cout << "Nilai UAS anda : " << UASBrain << endl;
-				cout << "*Tekan apa saja untuk kembali" << endl;
-			}
-			else if (NIM=="051"){
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+			} else if (NIM=="051"){
 				cout << "Nilai UTS anda : " << UTSJopi << endl;
 				cout << "Nilai UAS anda : " << UASJopi << endl;
-				cout << "*Tekan apa saja untuk kembali" << endl;
-			}
-			getch();
-			continue;
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+			} 
+			
+			getch(); continue;
 
 			//Exit
-			case 4:
+			case '4':
 			goto halaman_awal;
 			break;
 
@@ -270,7 +251,7 @@ int main(){
 		}
 
 	break;
-	} while(salahMain == 'y');
+	} while(true);
 }
 
 //Fungsi
@@ -292,12 +273,16 @@ void tatatertib(){
 	cout << "1. Dilarang membuka handphone atau catatan selama ujian berlangsung" << endl;
 	cout << "2. Dilarang melihat jawaban milik orang lain" << endl;
 	cout << "3. Dilarang meninggalkan ruang ujian sebelum waktu berakhir" << endl;
-	cout << "=====================================================================" << endl;
-	cout << "\t\tJangan lupa berdoa sebelum mengerjakan!" << endl;
-	cout << "=====================================================================" << endl;
+	cout << "----------------------------------------------------------------------" << endl;
 }
 
 int UTS(){
+	system("CLS");
+	cout << "======================================" << endl;
+	cout << "Jangan lupa berdoa sebelum mengerjakan" << endl;
+	cout << "======================================" << endl;
+	getch();
+
 	int nilai = 0;
 	string jawaban;
 	
@@ -313,12 +298,12 @@ int UTS(){
 		if(jawaban == "c" || jawaban == "C"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
+
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -336,12 +321,12 @@ int UTS(){
 		if(jawaban == "b" || jawaban == "B"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
+
+		} else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -359,12 +344,12 @@ int UTS(){
 		if(jawaban == "c" || jawaban == "C"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
+
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -382,12 +367,12 @@ int UTS(){
 		if(jawaban == "b" || jawaban == "B"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
+
+		} else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -405,12 +390,12 @@ int UTS(){
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -422,13 +407,19 @@ int UTS(){
 }
 
 int UAS(){
+	system("CLS");
+	cout << "======================================" << endl;
+	cout << "Jangan lupa berdoa sebelum mengerjakan" << endl;
+	cout << "======================================" << endl;
+	getch();
+
 	int nilai = 0;
 	string jawaban;
 	
 	//Soal dan Jawaban UAS
 	do{
 		system("CLS");
-cout << "1. Berikut ini adalah operator increment dan decrement..." << endl;
+		cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
 		cout << "a. ++ dan -- " << endl;
 		cout << "b. ++ dan ** " << endl;
 		cout << "c. || dan && " << endl << endl;
@@ -437,12 +428,12 @@ cout << "1. Berikut ini adalah operator increment dan decrement..." << endl;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			getch();
 		}
@@ -459,12 +450,12 @@ cout << "1. Berikut ini adalah operator increment dan decrement..." << endl;
 		if(jawaban == "c" || jawaban == "C"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
+
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -482,12 +473,12 @@ cout << "1. Berikut ini adalah operator increment dan decrement..." << endl;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -497,20 +488,19 @@ cout << "1. Berikut ini adalah operator increment dan decrement..." << endl;
 	do{
 		system("CLS");
 		cout << "4. Dalam menyusun suatu program, langkah pertama yang harus dilakukan adalah.." << endl;
-		cout << "a. Membuat Algoritma " << endl;
-		cout << "b. Langsung Membuat Kode Program " << endl;
-		cout << "c. Mempelajari Program " << endl;
+		cout << "a. Membuat Algoritma Flowchart" << endl;
+		cout << "b. Langsung Membuat Kode Program " << endl << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+
+		} else if(jawaban == "b" || jawaban == "B"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -528,12 +518,12 @@ cout << "1. Berikut ini adalah operator increment dan decrement..." << endl;
 		if(jawaban == "b" || jawaban == "B"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+
+		} else if(jawaban == "a" || jawaban == "A"){
 			nilai = nilai;
 			break;
-		}
-		else{
+
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
