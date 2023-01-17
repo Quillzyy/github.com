@@ -54,10 +54,10 @@ int main(){
 	login :
 		//cout<<"==========List NIM yang terdaftar========== \n";
 		system("CLS");
-		cout<<"     _______________" << endl;
-		cout<<"    |               |" << endl;
-		cout<<"    |     LOGIN     |\n";
-		cout<<"    |_______________| \n" << endl;
+		cout<<"   _________________" << endl;
+		cout<<"  |                 |" << endl;
+		cout<<"  |      LOGIN      |\n";
+		cout<<"  |_________________| \n" << endl;
 		cout<<"Masukan NIM: 2207421";
 		cin>>NIM;
 
@@ -239,6 +239,7 @@ void intro (string Nama, string NIM) {  //fungsi untuk perkenalan
 	getch();
 }
 
+
 void tatatertib(){
 	cout << "---------------------------- TATA TERTIB ----------------------------" << endl;
 	cout << "1. Dilarang membuka handphone atau catatan selama ujian berlangsung" << endl;
@@ -246,6 +247,7 @@ void tatatertib(){
 	cout << "3. Dilarang meninggalkan ruang ujian sebelum waktu berakhir" << endl;
 	cout << "---------------------------------------------------------------------" << endl;
 }
+
 
 int UTS(){
 	int nilai = 0;
@@ -362,6 +364,8 @@ int UTS(){
 	cout << "Selamat telah menyelesaikan tes \\(^o^)/" << endl;
 	return nilai;
 }
+
+
 
 int UAS(){
 	cout << "======================================" << endl;
