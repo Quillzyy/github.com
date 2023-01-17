@@ -39,11 +39,11 @@ int main(){
 	{
 		char awal;
 		system ("CLS");
-		cout << "Selamat datang di tampilan awal Projek Eleaning ini"<<endl;
+		cout << "Selamat datang di tampilan awal Projek Elearning ini"<<endl;
 		cout << "Silahkan pilih apa yang apa yang ingin anda lakukan"<<endl;
-		cout << "a. Login "<<endl;
-		cout << "b. Kembali ke bagian sebelumnya "<<endl;
-		cout << "c. Keluar Program "<<endl;
+		cout << "[a] Login "<<endl;
+		cout << "[b] Kembali ke bagian sebelumnya "<<endl;
+		cout << "[c] Keluar Program "<<endl;
 		cout << "Pilihan anda : "; cin>>awal;
 		
 		if(awal=='a') { goto login; 
@@ -73,7 +73,7 @@ int main(){
 			Nama="Kevin Alonzo Manuel Bakara";
 			break;
 		} else if (NIM=="047"){
-			Nama="Kevin Alonzo Manuel Bakara";
+			Nama="Abdurrahman Ammar Ihsan";
 			break;
 		} else if (NIM=="051"){
 			Nama="Jonatan Victorian Wijaya";
@@ -87,12 +87,11 @@ int main(){
 		} else if (NIM=="059"){
 			Nama="Cornelius Yuli Rosdianto";
 			break;
-		} else if (NIM == "00"){
-			goto halaman_awal;
 		} else{
 			cout<<"Maaf NIM dengan akhiran '" << NIM << "' tidak terdaftar \n";
-			cout << "Ketik '00' pada login untuk kembali ke halaman awal" << endl;
-			getch(); system("CLS");
+			cout << "*Ketik enter untuk kembali ke halaman awal" << endl; getch();
+			goto halaman_awal;
+			system("CLS");
 		}
 		 		
 	} while (true);
@@ -104,15 +103,15 @@ int main(){
 
 		//Judul
 		cout << "________________________________________" << endl;
-		cout << "	SELAMAT DATANG			|" << endl;
+		cout << "	   SELAMAT DATANG		|" << endl;
 		cout << "Nama 	: " << Nama << "	|" << endl;
 		cout << "NIM	: 2207421" << NIM <<"			|" << endl;
 		cout << "Kelas	: TMJ 1B" << "			|" << endl;
 		cout << "________________________________________|" << endl;
-		cout << "1. Lihat Profil" << endl;
-		cout << "2. Ujian" << endl;
-		cout << "3. Lihat Nilai" << endl;
-		cout << "4. Logout" << endl << endl;
+		cout << "[1] Lihat Profil" << endl;
+		cout << "[2] Ujian" << endl;
+		cout << "[3] Lihat Nilai" << endl;
+		cout << "[4] Logout" << endl << endl;
 		cout << "Pilihan Anda : ";
 		cin >> pil;
 
@@ -125,16 +124,16 @@ int main(){
 			intro(Nama, NIM);
 			system ("CLS");
 			continue;
-			//setelah nampilih profil, pindah ke menu_utama
+			//setelah nampilin profil, pindah ke menu_utama
 
 			//Ujian
 			case '2':
 			system("CLS");
-			cout << "SELAMAT DATANG DI HALAMAN UJIAN" << endl;
+			cout << "\t  SELAMAT DATANG DI HALAMAN UJIAN" << endl;
 			cout << "---------------------------------------------------" << endl;
-			cout << "1. Ujian Tengah Semester" << endl;
-			cout << "2. Ujian Akhir Semester" << endl;
-			cout << "3. Back" << endl;	
+			cout << "[1] Ujian Tengah Semester" << endl;
+			cout << "[2] Ujian Akhir Semester" << endl;
+			cout << "[3] Kembali ke menu utama" << endl;
 			cout << "Pilihan Anda : ";
 			cin >> pil1;
 
@@ -149,7 +148,7 @@ int main(){
 				tatatertib();
 				cout << "Mulai ujian ? (y/n) : ";
 				cin >> mulai;
-				if (mulai=='y'){
+				if (mulai=='y' || mulai=='Y'){
 					if(NIM=="047"){
 						UTSAmar = UTS();
 					} else if (NIM=="059"){
@@ -177,7 +176,7 @@ int main(){
 				tatatertib();
 				cout << "Mulai ujian ? (y/n)";
 				cin >> mulai;
-				if (mulai=='y'){
+				if (mulai=='y' || mulai=='Y'){
 					if(NIM=="047"){
 						UASAmar = UAS();
 					} else if (NIM=="059"){
@@ -196,6 +195,9 @@ int main(){
 					goto menu_utama;
 				}
 
+				case 3:
+				goto menu_utama;
+
 				getch();
 				continue;
 
@@ -206,26 +208,34 @@ int main(){
 			//Lihat Nilai
             case '3':
 			system("CLS");
-			cout << "    NILAI ANDA" << endl;
-			cout << "---------------------" << endl;
+			cout << "\t ______________________" << endl;
+			cout << "\t|                      |" << endl;
+			cout << "\t|      NILAI ANDA      |" << endl;
+			cout << "\t|______________________|" << endl << endl;
 			if(NIM=="047"){
 				cout << "Nilai UTS anda : " << UTSAmar << endl;
 				cout << "Nilai UAS anda : " << UASAmar << endl;
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="059"){
 				cout << "Nilai UTS anda : " << UTSCornet << endl;
 				cout << "Nilai UAS anda : " << UASCornet << endl;
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="032"){
 				cout << "Nilai UTS anda : " << UTSKepin << endl;
 				cout << "Nilai UAS anda : " << UASKepin << endl;
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="057"){
 				cout << "Nilai UTS anda : " << UTSSaqil << endl;
 				cout << "Nilai UAS anda : " << UASSaqil << endl;
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="056"){
 				cout << "Nilai UTS anda : " << UTSBrain << endl;
 				cout << "Nilai UAS anda : " << UASBrain << endl;
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="051"){
 				cout << "Nilai UTS anda : " << UTSJopi << endl;
 				cout << "Nilai UAS anda : " << UASJopi << endl;
+				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
 			} 
 			
 			getch(); continue;
@@ -259,11 +269,11 @@ void intro (string Nama, string NIM) {  //fungsi untuk perkenalan
 }
 
 void tatatertib(){
-	cout << "---------------------------- TATA TERTIB ----------------------------" << endl;
+	cout << "--------------------------- TATA TERTIB -----------------------------" << endl;
 	cout << "1. Dilarang membuka handphone atau catatan selama ujian berlangsung" << endl;
 	cout << "2. Dilarang melihat jawaban milik orang lain" << endl;
 	cout << "3. Dilarang meninggalkan ruang ujian sebelum waktu berakhir" << endl;
-	cout << "---------------------------------------------------------------------" << endl;
+	cout << "----------------------------------------------------------------------" << endl;
 }
 
 int UTS(){
@@ -279,7 +289,7 @@ int UTS(){
 	//Soal dan Jawaban UTS
 	do{
 		system("CLS");
-		cout << "1. Pada c++, perintah 'cin' digunakan untuk..." << endl;
+		cout << "1. Pada C++, perintah 'cin' digunakan untuk..." << endl;
 		cout << "a. Mengulang" << endl;
 		cout << "b. Menampilkan" << endl;
 		cout << "c. Menginput" << endl << endl;
@@ -302,7 +312,7 @@ int UTS(){
 
 	do{
 		system("CLS");
-		cout << "2. Pada c++, perintah 'cout' digunakan untuk..." << endl;
+		cout << "2. Pada C++, perintah 'cout' digunakan untuk..." << endl;
 		cout << "a. Mengulang" << endl;
 		cout << "b. Menampilkan" << endl;
 		cout << "c. Menginput" << endl << endl;
@@ -325,7 +335,7 @@ int UTS(){
 
 	do{
 		system("CLS");
-		cout << "3. Pada c++, 'int' merupakan tipe data..." << endl;
+		cout << "3. Pada C++, 'int' merupakan tipe data..." << endl;
 		cout << "a. Logika" << endl;
 		cout << "b. Huruf" << endl;
 		cout << "c. Angka" << endl << endl;
@@ -348,7 +358,7 @@ int UTS(){
 
 	do{
 		system("CLS");
-		cout << "4. Pada c++, 'float' merupakan tipe data..." << endl;
+		cout << "4. Pada C++, 'float' merupakan tipe data..." << endl;
 		cout << "a. Bilangan bulat" << endl;
 		cout << "b. Bilangan desimal" << endl;
 		cout << "c. Bilangan irasional" << endl << endl;
@@ -371,7 +381,7 @@ int UTS(){
 
 	do{
 		system("CLS");
-		cout << "5. Pada c++, 'bool' merupakan tipe data..." << endl;
+		cout << "5. Pada C++, 'bool' merupakan tipe data..." << endl;
 		cout << "a. Logika" << endl;
 		cout << "b. Huruf" << endl;
 		cout << "c. Angka" << endl << endl;
@@ -392,7 +402,7 @@ int UTS(){
 		}
 	}while(true);
 
-	cout << "Selamat telah menyelesaikan tes \\(^o^)/" << endl;
+	cout << "Selamat anda telah menyelesaikan tes \\(^o^)/" << endl;
 	return nilai;
 }
 
@@ -454,7 +464,7 @@ int UAS(){
 
 	do{
 		system("CLS");
-		cout << "3.  Berikut bentuk umum penulisan pernyataan if yang benar yaitu" << endl;
+		cout << "3. Berikut bentuk umum penulisan pernyataan 'if' yang benar yaitu..." << endl;
 		cout << "a. if (x > y); " << endl;
 		cout << "b. if x > y then: " << endl;
 		cout << "c. if (x > y) then: " << endl << endl;
@@ -500,8 +510,9 @@ int UAS(){
 	do{
 		system("CLS");
 		cout << "5. Berikut ini yang bukan termasuk metode pengurutan data pada elemen array..." << endl;
-		cout << "a. Distance Sort " << endl;
-		cout << "b. Bubble Sort " << endl << endl;
+		cout << "a. Bubble Sort " << endl;
+		cout << "b. Distance Sort " << endl;
+		cout << "c. Selection Sort " << endl;
 		cout << "Jawaban anda: ";
 		cin >> jawaban;
 		if(jawaban == "b" || jawaban == "B"){
@@ -520,6 +531,6 @@ int UAS(){
 		}
 	}while(true);
 
-	cout << "Selamat telah menyelesaikan tes \\(^o^)/" << endl;
+	cout << "Selamat anda telah menyelesaikan tes \\(^o^)/" << endl;
 	return nilai;
 }
