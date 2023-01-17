@@ -67,31 +67,24 @@ int main(){
 		if(NIM=="047"){
 			Nama="Abdurrahman Ammar Ihsan";
 			break;
-		}
-		else if (NIM=="059"){
+		} else if (NIM=="059"){
 			Nama="Cornelius Yuli Rosdianto";
 			break;
-		}
-		else if (NIM=="032"){
+		} else if (NIM=="032"){
 			Nama="Kevin Alonzo Manuel Bakara";
 			break;
-		}
-		else if (NIM=="057"){
+		} else if (NIM=="057"){
 			Nama="Shaquille Arriza Hidayat";
 			break;
-		}
-		else if (NIM=="056"){
+		} else if (NIM=="056"){
 			Nama="Muhammad Brian Azura Nixon";
 			break;
-		}
-		else if (NIM=="051"){
+		} else if (NIM=="051"){
 			Nama="Jonatan Victorian Wijaya";
 			break;
-		}
-		else{
+		}else{
 			cout<<"Maaf NIM tidak terdaftar \n";
-			getch();
-			system("CLS");
+			getch(); system("CLS");
 		}		
 	} while (salahLogin =='y');
 
@@ -151,29 +144,23 @@ int main(){
 				if (mulai=='y'){
 					if(NIM=="047"){
 						UTSAmar = UTS();
-					}
-					else if (NIM=="059"){
+					} else if (NIM=="059"){
 						UTSCornet = UTS();
-					}
-					else if (NIM=="032"){
+					} else if (NIM=="032"){
 						UTSKepin = UTS();
-					}
-					else if (NIM=="057"){
+					} else if (NIM=="057"){
 						UTSSaqil = UTS();
-					}
-					else if (NIM=="056"){
+					} else if (NIM=="056"){
 						UTSBrain = UTS();
-					}
-					else if (NIM=="051"){
+					} else if (NIM=="051"){
 						UTSJopi = UTS();
 					}
-				}
-				else{
+
+				} else{
 					goto menu_utama;
 				}
 
-				getch();
-				continue;
+				getch(); continue;
 
 				case 2:
                 system("CLS");
@@ -186,29 +173,23 @@ int main(){
 				if (mulai=='y'){
 					if(NIM=="047"){
 						UASAmar = UAS();
-					}
-					else if (NIM=="059"){
+					} else if (NIM=="059"){
 						UASCornet = UAS();
-					}
-					else if (NIM=="032"){
+					} else if (NIM=="032"){
 						UASKepin = UAS();
-					}
-					else if (NIM=="057"){
+					} else if (NIM=="057"){
 						UASSaqil = UAS();
-					}
-					else if (NIM=="056"){
+					} else if (NIM=="056"){
 						UASBrain = UAS();
-					}
-					else if (NIM=="051"){
+					} else if (NIM=="051"){
 						UASJopi = UAS();
 					}
-				}
-				else{
+
+				} else{
 					goto menu_utama;
 				}
 
-				getch();
-				continue;
+				getch(); continue;
 
 				default:
 				continue;
@@ -222,29 +203,23 @@ int main(){
 			if(NIM=="047"){
 				cout << "Nilai UTS anda : " << UTSAmar << endl;
 				cout << "Nilai UAS anda : " << UASAmar << endl;
-			}
-			else if (NIM=="059"){
+			}else if (NIM=="059"){
 				cout << "Nilai UTS anda : " << UTSCornet << endl;
 				cout << "Nilai UAS anda : " << UASCornet << endl;
-			}
-			else if (NIM=="032"){
+			}else if (NIM=="032"){
 				cout << "Nilai UTS anda : " << UTSKepin << endl;
 				cout << "Nilai UAS anda : " << UASKepin << endl;
-			}
-			else if (NIM=="057"){
+			}else if (NIM=="057"){
 				cout << "Nilai UTS anda : " << UTSSaqil << endl;
 				cout << "Nilai UAS anda : " << UASSaqil << endl;
-			}
-			else if (NIM=="056"){
+			}else if (NIM=="056"){
 				cout << "Nilai UTS anda : " << UTSBrain << endl;
 				cout << "Nilai UAS anda : " << UASBrain << endl;
-			}
-			else if (NIM=="051"){
+			}else if (NIM=="051"){
 				cout << "Nilai UTS anda : " << UTSJopi << endl;
 				cout << "Nilai UAS anda : " << UASJopi << endl;
 			}
-			getch();
-			continue;
+			getch(); continue;
 
 			//Exit
 			case 4:
@@ -344,12 +319,10 @@ int UTS(){
 		if(jawaban == "c" || jawaban == "C"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -367,12 +340,10 @@ int UTS(){
 		if(jawaban == "b" || jawaban == "B"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
+		} else if(jawaban == "a" || jawaban == "A" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -390,12 +361,10 @@ int UTS(){
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -427,12 +396,10 @@ cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			getch();
 		}
@@ -449,12 +416,10 @@ cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
 		if(jawaban == "c" || jawaban == "C"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "a" || jawaban == "A"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -472,12 +437,10 @@ cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
+		} else if(jawaban == "b" || jawaban == "B" || jawaban == "c" || jawaban == "C"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -494,12 +457,10 @@ cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
 		if(jawaban == "a" || jawaban == "A"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "b" || jawaban == "B"){
+		} else if(jawaban == "b" || jawaban == "B"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
@@ -516,12 +477,10 @@ cout << "1. Berikut ini adalah operator increment dan decrement" << endl;
 		if(jawaban == "b" || jawaban == "B"){
 			nilai += 20;
 			break;
-		}
-		else if(jawaban == "a" || jawaban == "A"){
+		} else if(jawaban == "a" || jawaban == "A"){
 			nilai = nilai;
 			break;
-		}
-		else{
+		} else{
 			cout << "Jawaban anda tidak terdapat pada pilihan" << endl;
 			cout << "Tekan enter untuk kembali" << endl;
 			getch();
