@@ -16,7 +16,8 @@ int main(){
 	//Perkenalan
 	perkenalan :
 	system ("CLS");
-	cout << "Proyek Program Elearning" << endl;
+	cout << "	  PROYEK PROGRAM E-LEARNING" << endl;
+	cout << "=============================================" << endl;
 	cout << "Anggota: " << endl;
 	cout << "- Abdurrahman Ammar Ihsan		(047)" << endl;
 	cout << "- Cornelius Yuli Rosdianto		(059)" << endl;
