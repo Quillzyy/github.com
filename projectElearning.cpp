@@ -64,28 +64,28 @@ int main(){
 		cout<<"Masukan NIM: 2207421";
 		cin>>NIM;
 
-		if(NIM=="047"){
-			Nama="Abdurrahman Ammar Ihsan";
-			break;
-		}
-		else if (NIM=="059"){
-			Nama="Cornelius Yuli Rosdianto";
-			break;
-		}
-		else if (NIM=="032"){
+		if(NIM=="032"){
 			Nama="Kevin Alonzo Manuel Bakara";
 			break;
 		}
-		else if (NIM=="057"){
-			Nama="Shaquille Arriza Hidayat";
+		else if (NIM=="047"){
+			Nama="Kevin Alonzo Manuel Bakara";
+			break;
+		}
+		else if (NIM=="051"){
+			Nama="Jonatan Victorian Wijaya";
 			break;
 		}
 		else if (NIM=="056"){
 			Nama="Muhammad Brian Azura Nixon";
 			break;
 		}
-		else if (NIM=="051"){
-			Nama="Jonatan Victorian Wijaya";
+		else if (NIM=="057"){
+			Nama="Shaquille Arriza Hidayat";
+			break;
+		}
+		else if (NIM=="059"){
+			Nama="Cornelius Yuli Rosdianto";
 			break;
 		}
 		else{
