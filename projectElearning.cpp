@@ -16,7 +16,8 @@ int main(){
 	//Perkenalan
 	perkenalan :
 	system ("CLS");
-	cout << "Proyek Program Elearning" << endl;
+	cout << "	  PROYEK PROGRAM E-LEARNING" << endl;
+	cout << "=============================================" << endl;
 	cout << "Anggota: " << endl;
 	cout << "- Abdurrahman Ammar Ihsan		(047)" << endl;
 	cout << "- Cornelius Yuli Rosdianto		(059)" << endl;
@@ -217,27 +218,27 @@ int main(){
 			if(NIM=="047"){
 				cout << "Nilai UTS anda : " << UTSAmar << endl;
 				cout << "Nilai UAS anda : " << UASAmar << endl;
-				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+				cout << "*Tekan enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="059"){
 				cout << "Nilai UTS anda : " << UTSCornet << endl;
 				cout << "Nilai UAS anda : " << UASCornet << endl;
-				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+				cout << "*Tekan enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="032"){
 				cout << "Nilai UTS anda : " << UTSKepin << endl;
 				cout << "Nilai UAS anda : " << UASKepin << endl;
-				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+				cout << "*Tekan enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="057"){
 				cout << "Nilai UTS anda : " << UTSSaqil << endl;
 				cout << "Nilai UAS anda : " << UASSaqil << endl;
-				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+				cout << "*Tekan enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="056"){
 				cout << "Nilai UTS anda : " << UTSBrain << endl;
 				cout << "Nilai UAS anda : " << UASBrain << endl;
-				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+				cout << "*Tekan enter untuk kembali ke halaman awal" << endl;
 			} else if (NIM=="051"){
 				cout << "Nilai UTS anda : " << UTSJopi << endl;
 				cout << "Nilai UAS anda : " << UASJopi << endl;
-				cout << "*Ketik enter untuk kembali ke halaman awal" << endl;
+				cout << "*Tekan enter untuk kembali ke halaman awal" << endl;
 			} 
 			
 			getch(); continue;
